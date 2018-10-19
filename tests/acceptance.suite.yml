@@ -42,11 +42,3 @@ env:
           browser: 'firefox'
           capabilities:
             'name': 'parallel_test'
-
-  parallel_3:
-    modules:
-      config:
-        \TestingBotWebDriver:
-          browser: 'internet explorer'
-          capabilities:
-            'name': 'parallel_test'

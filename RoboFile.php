@@ -11,7 +11,7 @@ class Robofile extends \Robo\Tasks
 {
     use \Codeception\Task\MergeReports;
 
-    private $numParallel = 4;
+    private $numParallel = 2;
 
     public function parallelRun()
     {
