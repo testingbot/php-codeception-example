@@ -1,0 +1,52 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+
+modules:
+  enabled:
+    - \TestingBotWebDriver
+  config:
+    \TestingBotWebDriver:
+      host: 'hub.testingbot.com'
+      port: 80
+      browser: chrome
+      url: 'http://www.google.com'
+      capabilities:
+        'version': 'latest'
+        'platform': 'WIN10'
+
+env:
+  single:
+    modules:
+      config:
+        \TestingBotWebDriver:
+          capabilities:
+            'name': 'single_test'
+
+  parallel_0:
+    modules:
+      config:
+        \TestingBotWebDriver:
+          browser: 'chrome'
+          capabilities:
+            'name': 'parallel_test'
+
+  parallel_1:
+    modules:
+      config:
+        \TestingBotWebDriver:
+          browser: 'firefox'
+          capabilities:
+            'name': 'parallel_test'
+
+  parallel_3:
+    modules:
+      config:
+        \TestingBotWebDriver:
+          browser: 'internet explorer'
+          capabilities:
+            'name': 'parallel_test'

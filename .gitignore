@@ -1,0 +1,6 @@
+composer.lock
+composer.phar
+vendor/
+bin/
+tests/_output/*
+tests/_support/_generated/*

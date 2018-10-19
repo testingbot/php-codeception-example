@@ -1,0 +1,15 @@
+{
+  "require": {
+    "codeception/codeception": "*",
+    "consolidation/robo": "*",
+    "codeception/robo-paracept": "@dev"
+  },
+  "scripts": {
+    "test": "composer single && composer parallel",
+    "single": "vendor/bin/codecept run --env single -g single",
+    "parallel": "vendor/bin/robo parallel:all"
+  },
+  "autoload": {
+    "classmap": ["lib/"]
+  }
+}
