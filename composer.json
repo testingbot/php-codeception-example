@@ -2,7 +2,9 @@
   "require": {
     "codeception/codeception": "*",
     "consolidation/robo": "*",
-    "codeception/robo-paracept": "@dev"
+    "codeception/robo-paracept": "@dev",
+    "codeception/module-webdriver": "*",
+    "codeception/module-asserts": "@dev"
   },
   "scripts": {
     "test": "composer single && composer parallel",
